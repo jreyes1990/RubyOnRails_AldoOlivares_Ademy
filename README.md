@@ -46,6 +46,16 @@ Enlace documentacion de sinatra.
 
       * Se podria decir que es el intermediario entre las vistas y los modelos.
 
+  Para evitar que se generen los archivos de pruebas unitarias (test_unit) al crear un scaffold en Ruby on Rails, puedes agregar la opción --no-test-framework al comando rails generate scaffold. Esto le indicará a Rails que no debe generar los archivos de pruebas unitarias asociados al scaffold. Aquí está cómo puedes hacerlo:
+
+    rails generate scaffold Cource title:string --no-test-framework
+
+  Con esta opción, los archivos de pruebas unitarias no se generarán cuando ejecutes el comando de generación del scaffold. Esto significa que no se crearán los archivos *_test.rb y fixtures/*.yml.
+
+  Después de ejecutar este comando, solo se crearán los archivos relacionados con el scaffold, como los modelos, controladores, vistas, migraciones, etc., pero sin las pruebas unitarias.
+
+* GITHUB
+
   Para agregar una nueva URL remota a un repositorio Git en un proyecto de Rails, puedes utilizar el comando git remote add. Aquí tienes los pasos para hacerlo:
 
   Abre una terminal o línea de comandos.
