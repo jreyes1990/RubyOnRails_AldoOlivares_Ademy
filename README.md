@@ -45,3 +45,22 @@ Enlace documentacion de sinatra.
       * Responde a las peticiones de los usuarios, usualmente en forma de clicks, para mandárselos al modelo correspondiente. Por último despliega los resultados usando nuestras vistas.
 
       * Se podria decir que es el intermediario entre las vistas y los modelos.
+
+  Para agregar una nueva URL remota a un repositorio Git en un proyecto de Rails, puedes utilizar el comando git remote add. Aquí tienes los pasos para hacerlo:
+
+  Abre una terminal o línea de comandos.
+
+  Navega hasta el directorio de tu proyecto de Rails utilizando el comando cd.
+
+  Ejecuta el siguiente comando para agregar una nueva URL remota a tu repositorio Git. Por ejemplo, si deseas agregar una URL remota llamada "origin" y la URL es "https://github.com/tu-usuario/tu-repositorio.git", el comando sería:
+
+    git remote add origin https://github.com/tu-usuario/tu-repositorio.git
+
+  Asegúrate de reemplazar "https://github.com/tu-usuario/tu-repositorio.git" con la URL remota de tu repositorio Git.
+
+  Después de ejecutar este comando, habrás configurado la URL remota "origin" para tu repositorio de Rails. Puedes verificar que la URL remota se haya agregado correctamente ejecutando el comando git remote -v, que mostrará las URLs remotas configuradas para tu repositorio Git.
+
+    git remote -v
+
+
+
