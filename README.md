@@ -54,7 +54,7 @@ Enlace documentacion de sinatra.
 
   Después de ejecutar este comando, solo se crearán los archivos relacionados con el scaffold, como los modelos, controladores, vistas, migraciones, etc., pero sin las pruebas unitarias.
 
-* GITHUB
+GITHUB
 
   Para agregar una nueva URL remota a un repositorio Git en un proyecto de Rails, puedes utilizar el comando git remote add. Aquí tienes los pasos para hacerlo:
 
