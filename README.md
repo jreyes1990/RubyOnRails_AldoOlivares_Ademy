@@ -63,4 +63,27 @@ Enlace documentacion de sinatra.
     git remote -v
 
 
+  Para renombrar una rama (branch) en Git desde la línea de comandos, puedes seguir estos pasos:
+
+  Abre una terminal o línea de comandos.
+
+  Navega hasta el directorio de tu repositorio de Git utilizando el comando cd.
+
+  Asegúrate de estar en una rama diferente a la que deseas renombrar. Si estás en la misma rama que deseas renombrar, primero cámbiate a una rama diferente utilizando git checkout.
+
+  Utiliza el comando git branch -m seguido del nombre actual de la rama y el nuevo nombre que deseas asignarle. Por ejemplo, si deseas cambiar el nombre de la rama "old_name" a "new_name", ejecuta el siguiente comando:
+
+    git branch -m old_name new_name
+
+  Esto renombrará la rama "old_name" a "new_name".
+
+  Si la rama que deseas renombrar es la rama actual en la que te encuentras, puedes actualizar la rama remota con el nuevo nombre utilizando el siguiente comando:
+
+    git push origin :old_name new_name
+
+  Este comando eliminará la rama antigua del repositorio remoto y agregará la nueva con el nombre actualizado.
+
+  Después de ejecutar estos pasos, la rama habrá sido renombrada localmente y, si lo deseas, también en el repositorio remoto.
+
+  Es importante tener cuidado al renombrar ramas, especialmente si otros colaboradores del repositorio también están trabajando en ellas. Se recomienda comunicar claramente los cambios a los miembros del equipo para evitar cualquier confusión.
 
