@@ -1,5 +1,8 @@
 {
   "[markdown]": {
     "editor.defaultFormatter": null
+  },
+  "[ruby]": {
+    "editor.defaultFormatter": null
   }
 }

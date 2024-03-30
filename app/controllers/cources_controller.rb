@@ -21,18 +21,22 @@ class CourcesController < ApplicationController
 
   # POST /cources or /cources.json
   def create
-    @cource = Cource.new(cource_params)
-
-    respond_to do |format|
-      if @cource.save
+  respond_to do |format|
+    begin
+      ActiveRecord::Base.transaction do
+        @cource = Cource.new(cource_params)
+        @cource.save!
         format.html { redirect_to cource_url(@cource), notice: "Cource was successfully created." }
         format.json { render :show, status: :created, location: @cource }
-      else
-        format.html { render :new, status: :unprocessable_entity }
-        format.json { render json: @cource.errors, status: :unprocessable_entity }
       end
+    rescue ActiveRecord::RecordInvalid => e
+      format.html { render :new, status: :unprocessable_entity }
+      format.json { render json: @cource.errors, status: :unprocessable_entity }
+    rescue StandardError => e
+      handle_error(e, format)
     end
   end
+end
 
   # PATCH/PUT /cources/1 or /cources/1.json
   def update
@@ -66,5 +70,10 @@ class CourcesController < ApplicationController
     # Only allow a list of trusted parameters through.
     def cource_params
       params.require(:cource).permit(:title)
+    end
+
+    def handle_error(exception, format)
+      format.html { render plain: "An error occurred: #{exception.message}", status: :internal_server_error }
+      format.json { render json: { error: exception.message }, status: :internal_server_error }
     end
 end
