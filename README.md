@@ -65,19 +65,16 @@ Enlace documentacion de sinatra.
 
   Para renombrar una rama (branch) en Git desde la línea de comandos, puedes seguir estos pasos:
 
-  Abre una terminal o línea de comandos.
-
-  Navega hasta el directorio de tu repositorio de Git utilizando el comando cd.
-
-  Asegúrate de estar en una rama diferente a la que deseas renombrar. Si estás en la misma rama que deseas renombrar, primero cámbiate a una rama diferente utilizando git checkout.
-
-  Utiliza el comando git branch -m seguido del nombre actual de la rama y el nuevo nombre que deseas asignarle. Por ejemplo, si deseas cambiar el nombre de la rama "old_name" a "new_name", ejecuta el siguiente comando:
+  1. Abre una terminal o línea de comandos.
+  2. Navega hasta el directorio de tu repositorio de Git utilizando el comando cd.
+  3. Asegúrate de estar en una rama diferente a la que deseas renombrar. Si estás en la misma rama que deseas renombrar, primero cámbiate a una rama diferente utilizando git checkout.
+  4. Utiliza el comando git branch -m seguido del nombre actual de la rama y el nuevo nombre que deseas asignarle. Por ejemplo, si deseas cambiar el nombre de la rama "old_name" a "new_name", ejecuta el siguiente comando:
 
     git branch -m old_name new_name
 
   Esto renombrará la rama "old_name" a "new_name".
 
-  Si la rama que deseas renombrar es la rama actual en la que te encuentras, puedes actualizar la rama remota con el nuevo nombre utilizando el siguiente comando:
+  1. Si la rama que deseas renombrar es la rama actual en la que te encuentras, puedes actualizar la rama remota con el nuevo nombre utilizando el siguiente comando:
 
     git push origin :old_name new_name
 
@@ -87,3 +84,22 @@ Enlace documentacion de sinatra.
 
   Es importante tener cuidado al renombrar ramas, especialmente si otros colaboradores del repositorio también están trabajando en ellas. Se recomienda comunicar claramente los cambios a los miembros del equipo para evitar cualquier confusión.
 
+
+  Para eliminar una rama en Git desde la línea de comandos, puedes utilizar el comando git branch -d seguido del nombre de la rama que deseas eliminar. Aquí tienes los pasos:
+
+  1. Abre una terminal o línea de comandos.
+  2. Navega hasta el directorio de tu repositorio de Git utilizando el comando cd.
+  3. Asegúrate de no estar en la rama que deseas eliminar. Si estás en la rama que deseas eliminar, primero cámbiate a una rama diferente utilizando git checkout.
+  4. Utiliza el comando git branch -d seguido del nombre de la rama que deseas eliminar. Por ejemplo, si deseas eliminar una rama llamada "nombre_de_la_rama", ejecuta el siguiente comando:
+
+    git branch -d nombre_de_la_rama
+
+  Esto eliminará la rama "nombre_de_la_rama" de tu repositorio local. Si la rama contiene cambios que aún no se han fusionado en otra rama, Git te pedirá confirmación antes de eliminarla.
+
+  1. Si deseas eliminar una rama del repositorio remoto, puedes utilizar el comando git push con la opción --delete. Por ejemplo, si deseas eliminar la rama "nombre_de_la_rama" del repositorio remoto, ejecuta el siguiente comando:
+
+    git push origin --delete nombre_de_la_rama
+
+  Esto eliminará la rama "nombre_de_la_rama" del repositorio remoto.
+
+  Es importante tener cuidado al eliminar ramas, especialmente si contienen cambios importantes que aún no se han fusionado en otra rama. Se recomienda confirmar que estás eliminando la rama correcta antes de ejecutar el comando.
