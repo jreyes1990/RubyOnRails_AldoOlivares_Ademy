@@ -113,3 +113,6 @@ Enlace documentacion de sinatra.
   Esto eliminará la rama "nombre_de_la_rama" del repositorio remoto.
 
   Es importante tener cuidado al eliminar ramas, especialmente si contienen cambios importantes que aún no se han fusionado en otra rama. Se recomienda confirmar que estás eliminando la rama correcta antes de ejecutar el comando.
+
+
+    rails generate scaffold Cource title:string --no-test-framework --no-assets --no-helper
