@@ -69,7 +69,7 @@ end
 
     # Only allow a list of trusted parameters through.
     def cource_params
-      params.require(:cource).permit(:title)
+      params.require(:cource).permit(Cource.attribute_names.map(&:to_sym))
     end
 
     def handle_error(exception, format)
