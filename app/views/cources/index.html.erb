@@ -7,6 +7,7 @@
     <tr>
       <th>Title</th>
       <th>Description</th>
+      <th>Price</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -16,6 +17,7 @@
       <tr>
         <td><%= cource.title %></td>
         <td><%= cource.description %></td>
+        <td><%= cource.price %></td>
         <td><%= link_to 'Show', cource %></td>
         <td><%= link_to 'Edit', edit_cource_path(cource) %></td>
         <td><%= link_to 'Destroy', cource, method: :delete, data: { confirm: 'Are you sure?' } %></td>

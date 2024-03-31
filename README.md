@@ -116,3 +116,11 @@ GITHUB
 
 
     rails generate scaffold Cource title:string --no-test-framework --no-assets --no-helper
+
+  Genera migracion con campo decimal
+
+    rails g migration AddPriceToCources 'price:decimal{10,2}:float'
+
+  Si desea agregar un valor por default, dentro la migracion generada, puede agregar lo siguiente:
+
+    change_column_default :cources, :price, 0
